@@ -168,6 +168,132 @@
             color: gold; /* Gold text footer */  
             font-size: 0.9rem;  
         }  
+        @media only screen and (max-width: 768px) {  
+    body {  
+        font-size: 0.95rem; /* Adjusted font size for better readability on mobile */  
+    }  
+
+    header {  
+        padding: 1rem;  
+        flex-direction: column;  
+        align-items: flex-start;  
+        text-align: center;  
+    }  
+
+    .logo {  
+        font-size: 1.5rem; /* Adjusted logo size for mobile */  
+        margin-bottom: 0.5rem;  
+    }  
+
+    nav {  
+        display: flex;  
+        flex-direction: column; /* Stack navigation links vertically */  
+        width: 100%; /* Full width for navigation */  
+        gap: 1rem;  
+        padding: 1rem 0;  
+        background: #4B007D; /* Consistent navigation background */  
+        position: relative;  
+    }  
+
+    nav a {  
+        padding: 0.75rem 1rem; /* Sufficient padding for touch targets */  
+        width: 100%; /* Full width for links */  
+        text-align: center;  
+        background: rgba(255, 255, 255, 0.1);  
+        border-radius: 5px;  
+        display: block; /* Block display for better touch area */  
+    }  
+
+    nav a:hover {  
+        background: rgba(255, 255, 255, 0.2); /* Lighter background on hover */  
+        color: #FFC107;  
+    }  
+
+    .hero {  
+        flex-direction: column;  
+        padding: 4rem 1rem; /* Adjusted padding for a more compact layout */  
+        margin-bottom: 1.5rem;  
+    }  
+
+    .hero-content {  
+        max-width: 90%; /* Responsive width for content */  
+    }  
+
+    .hero-content h1 {  
+        font-size: 2.5rem; /* Reduced font size for mobile readability */  
+        margin-bottom: 1rem;  
+    }  
+
+    .hero-content p {  
+        font-size: 1.1rem; /* Adjust paragraph font size */  
+        margin-bottom: 1rem;  
+    }  
+
+    .contact-section {  
+        padding: 2rem; /* Reduced padding for mobile fit */  
+        margin: 1rem; /* Margin for spacing on mobile view */  
+        max-width: 90%; /* Responsive width */  
+    }  
+
+    .contact-section h2 {  
+        margin-bottom: 1rem;  
+        font-size: 1.5rem; /* Smaller heading size */  
+        text-align: center;  
+    }  
+
+    .contact-details {  
+        font-size: 1rem;  
+        margin-bottom: 1rem;  
+        text-align: center; /* Centered contact details */  
+    }  
+
+    .contact-form {  
+        display: flex;  
+        flex-direction: column;  
+        width: 100%;  
+    }  
+
+    .contact-form input,  
+    .contact-form textarea {  
+        padding: 0.75rem; /* Reduced padding for mobile */  
+        margin-bottom: 1rem;  
+        border-radius: 5px;  
+        border: 1px solid #ccc;  
+        font-size: 1rem;  
+    }  
+
+    .contact-form button {  
+        padding: 0.75rem; /* Reduced padding for button */  
+        background-color: #4B007D;  
+        font-size: 1.1rem;  
+        border-radius: 5px;  
+        cursor: pointer;  
+        transition: background-color 0.3s;  
+    }  
+
+    .contact-form button:hover {  
+        background-color: #8A2BE2; /* Lighter Purple on hover */  
+    }  
+
+    .cta {  
+        padding: 2rem 1rem; /* Reduced padding for mobile */  
+        margin-top: 1.5rem;  
+    }  
+
+    .cta h2 {  
+        font-size: 1.5rem;  
+        margin-bottom: 1rem;  
+    }  
+
+    .cta p {  
+        font-size: 1rem;  
+    }  
+
+    footer {  
+        font-size: 0.8rem; /* Adjusted font size for a cleaner look */  
+        padding: 1rem;  
+    }  
+}  
     </style>  
 </head>  
 
