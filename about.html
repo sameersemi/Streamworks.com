@@ -159,6 +159,149 @@
             color: gold;  
             font-size: 0.9rem;  
         }  
+        @media only screen and (max-width: 768px) {  
+    body {  
+        background-color: #f0f0f0; /* Maintain background from default styles */  
+    }  
+
+    header {  
+        padding: 1rem;  
+        flex-direction: column;  
+        align-items: center;  
+        text-align: center;  
+        position: relative;  
+        background: #4B007D; /* Consistent header background */  
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);  
+    }  
+
+    .logo {  
+        font-size: 1.5rem; /* Adjust logo size for mobile */  
+        font-weight: 700; /* Maintain boldness */  
+        color: white;  
+        margin-bottom: 0.5rem; /* Add space below logo */  
+    }  
+
+    .nav-toggle {  
+        display: block; /* Show the toggle for mobile */  
+        cursor: pointer;  
+        font-size: 1.5rem;  
+        margin-bottom: 0.5rem; /* Space below the toggle button */  
+    }  
+
+    nav {  
+        display: flex;  
+        flex-direction: column; /* Stack navigation items vertically */  
+        align-items: center;  
+        padding: 1rem 0;  
+        gap: 1rem;  
+        background-color: #4B007D; /* Consistent nav background */  
+        width: 100%; /* Full width for navigation */  
+        position: absolute; /* Positioned off the layout flow */  
+        top: 60px; /* Adjust depending on your header height */  
+        left: 0;  
+        transform: translateY(-100%); /* Initially hidden */  
+        transition: transform 0.3s ease;  
+    }  
+
+    nav.show {  
+        transform: translateY(0); /* Show the nav when toggled */  
+    }  
+
+    nav a {  
+        color: gold;  
+        text-decoration: none;  
+        font-weight: 500;  
+        padding: 0.5rem 1rem; /* Sufficient touch target size */  
+        background: rgba(255, 255, 255, 0.1); /* Slight background for distinct links */  
+        border-radius: 5px;  
+        width: 100%; /* Full width links for easier clicking */  
+        text-align: center;  
+    }  
+
+    nav a:hover {  
+        color: #FFC107; /* Light Gold on hover */  
+        background: rgba(255, 255, 255, 0.2); /* Lighter background on hover */  
+    }  
+
+    .hero {  
+        display: flex;  
+        flex-direction: column; /* Stack hero content vertically */  
+        justify-content: center;  
+        align-items: center;  
+        padding: 3rem 1rem; /* Adjusted padding for mobile */  
+        background: linear-gradient(135deg, #4B007D, #8A2BE2);  
+        color: white;  
+        text-align: center;  
+        margin-bottom: 2rem;  
+    }  
+
+    .hero-content {  
+        max-width: 90%; /* Keep content responsive */  
+        margin: 0 auto;  
+    }  
+
+    .hero-content h1 {  
+        font-size: 2.5rem; /* Smaller h1 for mobile */  
+        margin-bottom: 1rem;  
+        line-height: 1.2;  
+    }  
+
+    .hero img {  
+        max-width: 80%; /* Reduced image size for better fit */  
+        height: auto; /* Maintain aspect ratio */  
+        margin: 1rem 0; /* Space around the image */  
+    }  
+
+    .about-section {  
+        flex-direction: column; /* Stack items vertically on mobile */  
+        padding: 3rem 1rem; /* Adjusted padding */  
+        margin: 1rem; /* Margin around sections */  
+    }  
+
+    .about-section {  
+        padding: 3rem 1rem;  
+    }  
+
+    .about-text {  
+        max-width: 100%; /* Use full width on mobile */  
+        margin-bottom: 1rem;  
+    }  
+
+    .about-image {  
+        max-width: 200px; /* Adjusted image size */  
+        margin: 1rem auto; /* Center image with margin */  
+    }  
+
+    .features {  
+        padding: 2rem 1rem;  
+        grid-template-columns: 1fr; /* Stack features vertically on mobile */  
+    }  
+
+    .feature {  
+        padding: 1rem;  
+        margin-bottom: 1rem;  
+    }  
+
+    .testimonials {  
+        padding: 2rem 1rem; /* Increased padding for mobile */  
+    }  
+
+    .cta {  
+        padding: 2rem 1rem; /* Reduced padding for mobile display */  
+        text-align: center;  
+    }  
+
+    .cta h2 {  
+        font-size: 1.5rem;  
+        margin-bottom: 1rem;  
+    }  
+
+    footer {  
+        font-size: 0.8rem;  
+        padding: 1rem;  
+    }  
+}  
+      
     </style>  
 </head>  
 
