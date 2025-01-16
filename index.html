@@ -173,7 +173,114 @@
             background: #4B007D; /* Royal Purple footer */  
             color: gold; /* Gold text footer */  
             font-size: 0.9rem;  
-        }  
+        } 
+
+        @media only screen and (max-width: 768px) {  
+    header {  
+        padding: 1rem;  
+        flex-direction: column;  
+        align-items: center;  
+        text-align: center;  
+        position: relative;  
+    }  
+
+    .logo {  
+        font-size: 1.5rem; /* Smaller logo text */  
+        margin-bottom: 1rem;  
+    }  
+
+    .nav-toggle {  
+        display: none; /* Initially hide the toggle button */  
+        cursor: pointer;  
+        font-size: 1.5rem;  
+        margin-bottom: 1rem; /* Add space below the toggle button */  
+    }  
+
+    nav {  
+        display: flex;  
+        flex-direction: column; /* Stack navigation items vertically */  
+        align-items: center;  
+        padding: 1rem 0;  
+        gap: 1rem;   
+        background-color: #4B007D; /* Match the header background */  
+        width: 100%; /* Full width for navigation */  
+        position: absolute; /* Positioned off the layout flow */  
+        top: 60px; /* Adjust depending on your header height */  
+        left: 0;  
+        transform: translateY(-100%); /* Initially hidden */  
+        transition: transform 0.3s ease;  
+    }  
+
+    nav.show {  
+        transform: translateY(0); /* Show the nav when toggled */  
+    }  
+
+    nav a {  
+        padding: 0.5rem 1rem; /* Sufficient touch target size */  
+        color: gold; /* Gold text for nav links */  
+        background: rgba(255, 255, 255, 0.1); /* Slight background for distinct links */  
+        border-radius: 5px;  
+        width: 100%; /* Full width links for easier clicking */  
+        text-align: center;  
+    }  
+
+    nav a:hover {  
+        background: rgba(255, 255, 255, 0.2); /* Lighter background on hover */  
+    }  
+
+    .hero {  
+        flex-direction: column;  
+        padding: 3rem 1rem;  
+        text-align: center;  
+    }  
+
+    .hero-content {  
+        max-width: 90%;  
+        margin: 0 auto;  
+        padding: 0 1rem;  
+    }  
+
+    .hero-content h1 {  
+        font-size: 2.2rem;  
+        margin-bottom: 1rem;  
+    }  
+
+    .hero-content p {  
+        font-size: 1rem;  
+        margin-bottom: 1.5rem;  
+    }  
+
+    .hero img {  
+        max-width: 80%; /* Reduce image size for better fit */  
+        height: auto; /* Maintain aspect ratio */  
+        margin: 1rem 0; /* Add space around the image */  
+    }  
+
+    .features {  
+        padding: 2rem 1rem;  
+        grid-template-columns: 1fr; /* Stack features vertically on mobile */  
+    }  
+
+    .feature {  
+        padding: 1rem;  
+        margin-bottom: 1rem;  
+    }  
+
+    .cta {  
+        padding: 2rem 1rem;  
+        text-align: center;  
+    }  
+
+    .cta h2 {  
+        font-size: 1.5rem;  
+        margin-bottom: 1rem;  
+    }  
+
+    footer {  
+        font-size: 0.8rem;  
+        padding: 1rem;  
+    }  
+}       
     </style>  
 </head>  
 
