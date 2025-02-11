@@ -150,161 +150,90 @@
             color: gold; /* Gold text footer */  
             font-size: 0.9rem;  
         }  
-        @media only screen and (max-width: 768px) {  
-    body {  
-        background-color: #f0f0f0; /* Ensure consistent background color */  
-    }  
+        .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    header {  
-        padding: 1rem;  
-        flex-direction: column;  
-        align-items: center;  
-        text-align: center;  
-        background: #4B007D; /* Header background matches desktop */  
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);  
-    }  
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
 
-    .logo {  
-        font-size: 1.5rem; /* Adjust logo size for mobile */  
-        color: white;  
-        margin-bottom: 0.5rem; /* Spacing below logo */  
-    }  
+.nav a {
+    color: gold;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
 
-    .nav-toggle {  
-        display: block; /* Show the toggle button in mobile layout */  
-        cursor: pointer;  
-        font-size: 1.5rem;  
-        margin-bottom: 0.5rem; /* Space below toggle */  
-    }  
+.nav-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
 
-    nav {  
-        display: flex;  
-        flex-direction: column; /* Stack navigation items vertically */  
-        align-items: center;  
-        padding: 1rem 0;  
-        gap: 1rem;  
-        background-color: #4B007D;  
-        width: 100%; /* Full width for navigation */  
-        position: absolute; /* Off the layout flow */  
-        top: 60px; /* Just below the header */  
-        left: 0;  
-        transform: translateY(-100%); /* Initially hidden */  
-        transition: transform 0.3s ease;  
-    }  
+.nav-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: gold;
+    margin-bottom: 5px;
+}
 
-    nav.show {  
-        transform: translateY(0); /* Show the nav when toggled */  
-    }  
+@media only screen and (max-width: 768px) {
+    .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #4B007D;
+        padding: 1rem;
+    }
 
-    nav a {  
-        color: gold;  
-        text-decoration: none;  
-        font-weight: 500;  
-        padding: 1rem;  
-        width: 100%; /* Full width link for easy tapping */  
-        text-align: center;  
-        background: rgba(255, 255, 255, 0.1); /* Distinct background for links */  
-        border-radius: 5px;  
-    }  
+    .nav ul {
+        flex-direction: column;
+    }
 
-    nav a:hover {  
-        background: rgba(255, 255, 255, 0.2); /* Lighter background on hover */  
-        color: #FFC107;  
-    }  
+    .nav a {
+        padding: 0.5rem 0;
+    }
 
-    .hero {  
-        display: flex;  
-        flex-direction: column;  
-        justify-content: center;  
-        align-items: center;  
-        padding: 3rem 1rem; /* Adjusted padding for a more compact layout */  
-        background: linear-gradient(135deg, #4B007D, #8A2BE2);  
-        color: white;  
-        text-align: center;  
-        margin-bottom: 2rem;  
-    }  
+    .nav-toggle {
+        display: block;
+    }
 
-    .hero-content {  
-        max-width: 90%; /* Responsive width for content */  
-    }  
-
-    .hero-content h1 {  
-        font-size: 2.5rem; /* Reduced font-size for better mobile readability */  
-        margin-bottom: 1rem;  
-    }  
-
-    .hero-content p {  
-        font-size: 1.1rem; /* Adjusted paragraph font size for mobile */  
-        margin-bottom: 1.5rem;  
-    }  
-
-    .services-section {  
-        padding: 3rem 1rem; /* Reduced padding for better fit on mobile */  
-        background: white;  
-        border-radius: 15px;  
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  
-        margin: 1rem; /* Margin for spacing on mobile view */  
-    }  
-
-    .services-section h2 {  
-        color: #4B007D;  
-        margin-bottom: 1rem;  
-        text-align: center; /* Center the heading for better layout */  
-    }  
-
-    .service {  
-        max-width: 100%; /* Full width for services on mobile */  
-        padding: 1rem;  
-        border: 1px solid #ccc;  
-        border-radius: 10px;  
-        background: #f9f9f9;  
-        margin-bottom: 1rem; /* Space between services */  
-    }  
-
-    .service h3 {  
-        color: #4B007D;  
-        margin-bottom: 0.5rem;  
-    }  
-
-    .service p {  
-        margin: 0.5rem 0;  
-    }  
-
-    .cta {  
-        padding: 2rem 1rem; /* Reduced padding for mobile */  
-        text-align: center;  
-        background: #4B007D;  
-        color: white;  
-        border-radius: 15px;  
-    }  
-
-    .cta h2 {  
-        margin-bottom: 1rem;  
-        font-size: 1.5rem;  
-    }  
-
-    .cta p {  
-        margin-bottom: 1.5rem;  
-        font-size: 1rem;  
-    }  
-
-    footer {  
-        font-size: 0.8rem;  
-        padding: 1rem;  
-    }  
-}  
+    .nav-toggle:checked + .nav {
+        display: block;
+    }
+} 
     </style>  
 </head>  
 
 <body>  
-    <header>  
-        <div class="logo">Stream<span>Works</span></div>  
-        <nav>  
-            <a href="services.html">Services</a>  
-            <a href="about.html">About</a>  
-            <a href="contact.html">Contact</a>  
-        </nav>  
-    </header>  
+    <body>  
+        <header>
+            <div class="logo">Stream<span>Works</span></div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header> 
 
     <section class="hero">  
         <div class="hero-content">  
@@ -341,6 +270,16 @@
     <footer>  
         <p>&copy; 2024 StreamWorks. All rights reserved. | Empowering SaaS Sales</p>  
     </footer>  
+    <script>
+       
+        const navToggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('.nav');
+
+navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('active');
+    nav.classList.toggle('active');
+});
+    </script>
 </body>  
 
 </html>
