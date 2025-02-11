@@ -168,144 +168,90 @@
             color: gold; /* Gold text footer */  
             font-size: 0.9rem;  
         }  
-        @media only screen and (max-width: 768px) {  
-    body {  
-        font-size: 0.95rem; /* Adjusted font size for better readability on mobile */  
-    }  
+        .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    header {  
-        padding: 1rem;  
-        flex-direction: column;  
-        align-items: flex-start;  
-        text-align: center;  
-    }  
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
 
-    .logo {  
-        font-size: 1.5rem; /* Adjusted logo size for mobile */  
-        margin-bottom: 0.5rem;  
-    }  
+.nav a {
+    color: gold;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
 
-    nav {  
-        display: flex;  
-        flex-direction: column; /* Stack navigation links vertically */  
-        width: 100%; /* Full width for navigation */  
-        gap: 1rem;  
-        padding: 1rem 0;  
-        background: #4B007D; /* Consistent navigation background */  
-        position: relative;  
-    }  
+.nav-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
 
-    nav a {  
-        padding: 0.75rem 1rem; /* Sufficient padding for touch targets */  
-        width: 100%; /* Full width for links */  
-        text-align: center;  
-        background: rgba(255, 255, 255, 0.1);  
-        border-radius: 5px;  
-        display: block; /* Block display for better touch area */  
-    }  
+.nav-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: gold;
+    margin-bottom: 5px;
+}
 
-    nav a:hover {  
-        background: rgba(255, 255, 255, 0.2); /* Lighter background on hover */  
-        color: #FFC107;  
-    }  
+@media only screen and (max-width: 768px) {
+    .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #4B007D;
+        padding: 1rem;
+    }
 
-    .hero {  
-        flex-direction: column;  
-        padding: 4rem 1rem; /* Adjusted padding for a more compact layout */  
-        margin-bottom: 1.5rem;  
-    }  
+    .nav ul {
+        flex-direction: column;
+    }
 
-    .hero-content {  
-        max-width: 90%; /* Responsive width for content */  
-    }  
+    .nav a {
+        padding: 0.5rem 0;
+    }
 
-    .hero-content h1 {  
-        font-size: 2.5rem; /* Reduced font size for mobile readability */  
-        margin-bottom: 1rem;  
-    }  
+    .nav-toggle {
+        display: block;
+    }
 
-    .hero-content p {  
-        font-size: 1.1rem; /* Adjust paragraph font size */  
-        margin-bottom: 1rem;  
-    }  
-
-    .contact-section {  
-        padding: 2rem; /* Reduced padding for mobile fit */  
-        margin: 1rem; /* Margin for spacing on mobile view */  
-        max-width: 90%; /* Responsive width */  
-    }  
-
-    .contact-section h2 {  
-        margin-bottom: 1rem;  
-        font-size: 1.5rem; /* Smaller heading size */  
-        text-align: center;  
-    }  
-
-    .contact-details {  
-        font-size: 1rem;  
-        margin-bottom: 1rem;  
-        text-align: center; /* Centered contact details */  
-    }  
-
-    .contact-form {  
-        display: flex;  
-        flex-direction: column;  
-        width: 100%;  
-    }  
-
-    .contact-form input,  
-    .contact-form textarea {  
-        padding: 0.75rem; /* Reduced padding for mobile */  
-        margin-bottom: 1rem;  
-        border-radius: 5px;  
-        border: 1px solid #ccc;  
-        font-size: 1rem;  
-    }  
-
-    .contact-form button {  
-        padding: 0.75rem; /* Reduced padding for button */  
-        background-color: #4B007D;  
-        font-size: 1.1rem;  
-        border-radius: 5px;  
-        cursor: pointer;  
-        transition: background-color 0.3s;  
-    }  
-
-    .contact-form button:hover {  
-        background-color: #8A2BE2; /* Lighter Purple on hover */  
-    }  
-
-    .cta {  
-        padding: 2rem 1rem; /* Reduced padding for mobile */  
-        margin-top: 1.5rem;  
-    }  
-
-    .cta h2 {  
-        font-size: 1.5rem;  
-        margin-bottom: 1rem;  
-    }  
-
-    .cta p {  
-        font-size: 1rem;  
-    }  
-
-    footer {  
-        font-size: 0.8rem; /* Adjusted font size for a cleaner look */  
-        padding: 1rem;  
-    }  
-}  
+    .nav-toggle:checked + .nav {
+        display: block;
+    }
+}
     </style>  
 </head>  
 
 <body>  
-    <header>  
-        <div class="logo">Stream<span>Works</span></div>  
-        <nav>  
-            <a href="services.html">Services</a>  
-            <a href="about.html">About</a>  
-            <a href="contact.html">Contact</a>  
-        </nav>  
-    </header>  
+    <body>  
+        <header>
+            <div class="logo">Stream<span>Works</span></div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>>  
 
     <section class="hero">  
         <div class="hero-content">  
@@ -320,14 +266,16 @@
             <p><strong>Email:</strong> <a href="mailto:samstorehere@gmail.com" style="color: #4B007D;">samstorehere@gmail.com</a></p>  
             <p><strong>Phone:</strong> <a href="tel:+923361474079" style="color: #4B007D;">+92 336 1474079</a></p>  
         </div>  
-
-        <form class="contact-form">  
-            <input type="text" placeholder="Your Name" required>  
-            <input type="email" placeholder="Your Email" required>  
-            <textarea rows="5" placeholder="Your Message" required></textarea>  
+    
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form"> 
+            <input type="hidden" name="access_key" value="06ba031a-c782-445c-a193-4fdf802cd7e0"> 
+            <input type="text" name="name" placeholder="Your Name" required>  
+            <input type="email" name="email" placeholder="Your Email" required>  
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>  
             <button type="submit">Send Message</button>  
         </form>  
-    </section>  
+    </section>
+     
 
     <section class="cta">  
         <h2>Let’s Connect</h2>  
@@ -338,6 +286,16 @@
     <footer>  
         <p>&copy; 2024 StreamWorks. All rights reserved. | Empowering SaaS Sales</p>  
     </footer>  
+    <script>
+       
+        const navToggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('.nav');
+
+navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('active');
+    nav.classList.toggle('active');
+});
+    </script>
 </body>  
 
 </html>
