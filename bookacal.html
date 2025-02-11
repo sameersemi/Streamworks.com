@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Call | StreamWorks</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+ body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #4B007D;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #FFC107;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .logo span {
+            color: #FFA500;
+        }
+
+        .hero {
+            background-image: linear-gradient(to bottom, #4B007D, #8A2BE2);
+            background-size: 100% 300px;
+            background-position: 0% 100%;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .book-call {
+            background-color: white;
+            padding: 20px;
+            margin: 40px auto;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .book-call form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-call label {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #4B007D;
+        }
+
+        .book-call input[type="text"], .book-call input[type="email"], .book-call input[type="tel"], .book-call input[type="datetime-local"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .book-call button {
+            background-color: #FFD700;
+            color: #4B007D;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .book-call button:hover {
+            background-color: #FFE599;
+        }
+
+        footer {
+            background-color: #4B007D;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            clear: both;
+        }
+        .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav a {
+    color: gold;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+.nav-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: gold;
+    margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #4B007D;
+        padding: 1rem;
+    }
+
+    .nav ul {
+        flex-direction: column;
+    }
+
+    .nav a {
+        padding: 0.5rem 0;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-toggle:checked + .nav {
+        display: block;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Stream<span>Works</span></div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav class="nav">
+            <ul>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Book a Call with Our Expert</h1>
+            <p align="center">Let's discuss how we can help you achieve your goals.</p>
+        </div>
+     
+    </section>
+
+    <section class="book-call">
+        <div class="feature">
+            <h3>Book a Call</h3>
+            <p>Fill out the form below to schedule a call with our expert.</p>
+            <form>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name"><br><br>
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="phone">Your Phone Number:</label>
+                <input type="tel" id="phone" name="phone"><br><br>
+                <label for="date">Preferred Date and Time:</label>
+                <input type="datetime-local" id="date" name="date"><br><br>
+                <button class="cta">Book a Call</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 StreamWorks. All rights reserved.</p>
+        <p>Powered by <a href="(link unavailable)">Azienbiz</a></p>
+    </footer>
+</body>
+</html>
