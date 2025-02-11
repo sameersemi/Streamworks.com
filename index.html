@@ -7,326 +7,647 @@
     <title>StreamWorks - Your SaaS Sales Partner</title>  
     <link href="Streamworks.jpg" rel="stylesheet"> 
     <link href="Streamworks.jpg" rel="shortcut icon">   
-    <style>  
-        body {  
-            margin: 0;  
-            font-family: 'Roboto', sans-serif;  
-            line-height: 1.6;  
-            color: #333;  
-            background-color: #f0f0f0; /* Light neutral background */  
-        }  
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f0f0f0;
+        }
 
-        header {  
-            background: #4B007D; /* Royal Purple */  
-            color: gold; /* Gold text */  
-            padding: 1.5rem 2rem;  
-            display: flex;  
-            justify-content: space-between;  
-            align-items: center;  
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);  
-        }  
+        header {
+            background: #4B007D;
+            color: gold;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
 
-        .logo {  
-            font-size: 2rem;  
-            font-weight: 700;  
-            color: white; /* Make "Stream" white */  
-        }  
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+        }
 
-        .logo span {  
-            color: #FFA500; /* Luxurious Orange for "Works" */  
-        }  
+        .logo span {
+            color: #FFA500;
+        }
 
-        nav {  
-            display: flex;  
-            gap: 2rem;  
-        }  
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
 
-        nav a {  
-            color: gold; /* Gold text for nav links */  
-            text-decoration: none;  
-            font-weight: 500;  
-            padding: 0.5rem 0;  
-            transition: color 0.3s;  
-        }  
+        nav a {
+            color: gold;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 0;
+            transition: color 0.3s;
+        }
 
-        nav a:hover {  
-            color: #FFC107; /* Light Gold on hover */  
-        }  
+        nav a:hover {
+            color: #FFC107;
+        }
 
-        .hero {  
-            display: flex;  
-            align-items: center;  
-            justify-content: space-between;  
-            padding: 5rem 2rem;  
-            background: linear-gradient(135deg, #4B007D, #8A2BE2); /* Royal Purple to Blue Violet gradient */  
-            color: white; /* White text for contrast */  
-            position: relative;  
-            border-bottom-right-radius: 50%;  
-            border-bottom-left-radius: 50%;  
-        }  
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #4B007D, #8A2BE2);
+            color: white;
+            position: relative;
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+        }
 
-        .hero-content {  
-            max-width: 50%;  
-        }  
+        .hero-content {
+            max-width: 50%;
+        }
 
-        .hero-content h1 {  
-            font-size: 3rem;  
-            margin-bottom: 1rem;  
-            line-height: 1.2;  
-        }  
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
 
-        .hero-content p {  
-            margin-bottom: 2rem;  
-            font-size: 1.25rem;  
-        }  
+        .hero-content p {
+            margin-bottom: 2rem;
+            font-size: 1.25rem;
+        }
 
-        .hero-content a {  
-            display: inline-block;  
-            background: #FFD700; /* Bright Gold for button */  
-            color: #4B007D; /* Dark Purple text */  
-            padding: 0.75rem 1.5rem;  
-            text-decoration: none;  
-            border-radius: 30px;  
-            font-weight: 500;  
-            transition: background 0.3s, transform 0.3s;  
-        }  
+        .hero-content a {
+            display: inline-block;
+            background: #FFD700;
+            color: #4B007D;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: background 0.3s, transform 0.3s;
+        }
 
-        .hero-content a:hover {  
-            background: #FFC107; /* Light Gold on hover */  
-            transform: translateY(-2px);  
-        }  
+        .hero-content a:hover {
+            background: #FFC107;
+            transform: translateY(-2px);
+        }
 
-        .hero img {  
-            max-width: 440px;  
-            border-radius: 20px;  
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);  
-        }  
+        .hero img {
+            max-width: 440px;
+            border-radius: 20px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
 
-        .features {  
-            display: grid;  
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
-            gap: 2rem;  
-            padding: 3rem 2rem;  
-            background: white; /* Clean white background for features */  
-            border-radius: 20px;  
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  
-            margin-top: -4rem;  
-            position: relative;  
-            z-index: 1;  
-        }  
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 3rem 2rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-top: -4rem;
+            position: relative;
+            z-index: 1;
+        }
 
-        .feature {  
-            background: #f4f4f4; /* Light gray for feature cards */  
-            border-radius: 15px;  
-            padding: 2rem;  
-            text-align: center;  
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  
-            transition: transform 0.3s;  
-        }  
+        .feature {
+            background: #f4f4f4;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
 
-        .feature:hover {  
-            transform: translateY(-5px);  
-        }  
+        .feature:hover {
+            transform: translateY(-5px);
+        }
 
-        .feature h3 {  
-            margin-bottom: 1rem;  
-            color: #4B007D; /* Royal Purple for feature headings */  
-        }  
+        .feature h3 {
+            margin-bottom: 1rem;
+            color: #4B007D;
+        }
 
-        .feature p {  
-            color: #666; /* Darker gray for feature descriptions */  
-        }  
+        .feature p {
+            color: #666;
+        }
 
-        .cta {  
-            background: #4B007D; /* Royal Purple for CTA */  
-            color: white;  
-            text-align: center;  
-            padding: 3rem 2rem;  
-            margin-top: 2rem;  
-            border-radius: 15px;  
-        }  
+    footer {
+        text-align: center;
+        padding: 1.5rem;
+        background: #4B007D;
+        color: gold;
+        font-size: 0.9rem;
+    }
 
-        .cta h2 {  
-            margin-bottom: 1rem;  
-            font-size: 2rem;  
-        }  
+    footer p {
+        margin-bottom: 0.5rem;
+    }
 
-        .cta p {  
-            margin-bottom: 1.5rem;  
-            font-size: 1.1rem;  
-        }  
+    footer a {
+        color: white;
+        text-decoration: none;
+    }
 
-        .cta a {  
-            color: #FFD700; /* Bright Gold for CTA links */  
-            font-weight: 500;  
-            text-decoration: underline;  
-            transition: color 0.3s;  
-        }  
+    footer a:hover {
+        color: #FFC107;
+    }
+    .blog {
+    padding: 3rem 2rem;
+    background: #f4f4f4;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
-        .cta a:hover {  
-            color: #FFC107; /* Light Gold on hover */  
-        }  
+.blog h2 {
+    margin-bottom: 1rem;
+}
 
-        footer {  
-            text-align: center;  
-            padding: 1.5rem;  
-            background: #4B007D; /* Royal Purple footer */  
-            color: gold; /* Gold text footer */  
-            font-size: 0.9rem;  
-        } 
+.blog p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
 
-        @media only screen and (max-width: 768px) {  
-    header {  
-        padding: 1rem;  
-        flex-direction: column;  
-        align-items: center;  
-        text-align: center;  
-        position: relative;  
-    }  
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
 
-    .logo {  
-        font-size: 1.5rem; /* Smaller logo text */  
-        margin-bottom: 1rem;  
-    }  
+.blog-post {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
-    .nav-toggle {  
-        display: none; /* Initially hide the toggle button */  
-        cursor: pointer;  
-        font-size: 1.5rem;  
-        margin-bottom: 1rem; /* Add space below the toggle button */  
-    }  
+.blog-post h3 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
 
-    nav {  
-        display: flex;  
-        flex-direction: column; /* Stack navigation items vertically */  
-        align-items: center;  
-        padding: 1rem 0;  
-        gap: 1rem;   
-        background-color: #4B007D; /* Match the header background */  
-        width: 100%; /* Full width for navigation */  
-        position: absolute; /* Positioned off the layout flow */  
-        top: 60px; /* Adjust depending on your header height */  
-        left: 0;  
-        transform: translateY(-100%); /* Initially hidden */  
-        transition: transform 0.3s ease;  
-    }  
+.blog-post p {
+    font-size: 0.9rem;
+    color: #666;
+}
 
-    nav.show {  
-        transform: translateY(0); /* Show the nav when toggled */  
-    }  
+.call-to-action {
+        margin-top: 2rem;
+        text-align: center;
+    }
 
-    nav a {  
-        padding: 0.5rem 1rem; /* Sufficient touch target size */  
-        color: gold; /* Gold text for nav links */  
-        background: rgba(255, 255, 255, 0.1); /* Slight background for distinct links */  
-        border-radius: 5px;  
-        width: 100%; /* Full width links for easier clicking */  
-        text-align: center;  
-    }  
+    .call-to-action h2 {
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
 
-    nav a:hover {  
-        background: rgba(255, 255, 255, 0.2); /* Lighter background on hover */  
-    }  
+    .call-to-action p {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 1rem;
+    }
 
-    .hero {  
-        flex-direction: column;  
-        padding: 3rem 1rem;  
-        text-align: center;  
-    }  
 
-    .hero-content {  
-        max-width: 90%;  
-        margin: 0 auto;  
-        padding: 0 1rem;  
-    }  
+.blog h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
 
-    .hero-content h1 {  
-        font-size: 2.2rem;  
-        margin-bottom: 1rem;  
-    }  
+.blog p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
 
-    .hero-content p {  
-        font-size: 1rem;  
-        margin-bottom: 1.5rem;  
-    }  
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
 
-    .hero img {  
-        max-width: 80%; /* Reduce image size for better fit */  
-        height: auto; /* Maintain aspect ratio */  
-        margin: 1rem 0; /* Add space around the image */  
-    }  
+.blog-post {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-    .features {  
-        padding: 2rem 1rem;  
-        grid-template-columns: 1fr; /* Stack features vertically on mobile */  
-    }  
+.blog-post h3 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+}
 
-    .feature {  
-        padding: 1rem;  
-        margin-bottom: 1rem;  
-    }  
+.blog-post p {
+    font-size: 0.9rem;
+    color: #666;
+}
 
-    .cta {  
-        padding: 2rem 1rem;  
-        text-align: center;  
-    }  
+.cta {
+    background: #4B007D;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
 
-    .cta h2 {  
-        font-size: 1.5rem;  
-        margin-bottom: 1rem;  
-    }  
+.cta:hover {
+    background: #9c4dd1;
+}
 
-    footer {  
-        font-size: 0.8rem;  
-        padding: 1rem;  
-    }  
-}       
+.map-container {
+    margin-top: 2rem;
+}
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 3rem 2rem;
+    background: #4B007D;
+    border-radius: 70px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 2rem;
+    position: relative;
+}
+
+.testimonials-container h2 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.testimonial {
+    background: white;
+    border-radius: 55px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    width: calc(50% - 2rem);
+}
+
+.testimonial-content {
+    margin-bottom: 1rem;
+}
+
+.testimonial-content p {
+    font-size: 1.1rem;
+    color: #666;
+    font-style: italic;
+}
+
+.testimonial-content h4 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.testimonial-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 80%;
+    margin: 0 auto;
+    border: 2px solid #4B007D;
+}
+
+.testimonial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav a {
+    color: gold;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+.nav-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: gold;
+    margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #4B007D;
+        padding: 1rem;
+    }
+
+    .nav ul {
+        flex-direction: column;
+    }
+
+    .nav a {
+        padding: 0.5rem 0;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-toggle:checked + .nav {
+        display: block;
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    header {
+        padding: 1rem 1rem;
+        flex-direction: column;
+    }
+
+    header nav {
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero {
+        padding: 2rem 1rem;
+        background: linear-gradient(135deg, #4B007D, #8A2BE2);
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 2rem 1rem;
+        margin-top: -2rem;
+    }
+
+    .feature {
+        padding: 1.5rem;
+    }
+
+    .blog {
+        padding: 2rem 1rem;
+    }
+
+    .blog-posts {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    footer {
+        padding: 1rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 0.5rem 0.5rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .hero {
+        padding: 1rem 0.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero img {
+        border-radius: 5px;
+    }
+
+    .features {
+        padding: 1rem 0.5rem;
+    }
+
+    .feature {
+        padding: 1rem;
+    }
+
+    .blog {
+        padding: 1rem 0.5rem;
+    }
+
+    footer {
+        padding: 0.5rem;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+    .hero img {
+        max-width: 100%;
+        height: auto;
+        margin: 1rem auto;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
+    .hero-content p {
+        font-size: 0.9rem;
+        line-height: 1.3;
+    }
+}
     </style>  
 </head>  
 
 <body>  
-    <header>  
-        <div class="logo">Stream<span>Works</span></div>  
-        <nav>  
-            <a href="services.html">Services</a>  
-            <a href="about.html">About</a>  
-            <a href="contact.html">Contact</a>  
-        </nav>  
-    </header>  
+    <header>
+        <div class="logo">Stream<span>Works</span></div>
+        <nav class="nav">
+            <ul>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
 
-    <section class="hero">  
-        <div class="hero-content">  
-            <h1>We Drive Sales for Your SaaS Product</h1>  
-            <p>Partner with StreamWorks to connect your innovative SaaS product to the right audience through proven cold-calling strategies.</p>  
-            <a href="contact.html">Get Started Today</a>  
-        </div>  
-        <img src="chart2.jpeg" alt="Cold Calling Agency in Action">  
-    </section>  
+    <section class="hero">
+        <div class="hero-content">
+            <h1>We Drive Sales for Your SaaS Product</h1>
+            <p>Partner with StreamWorks to connect your innovative SaaS product to the right audience through proven cold-calling strategies.</p>
+            <a href="contact.html">Get Started Today</a>
+        </div>
+        <img src="chart2.jpeg" alt="Cold Calling Agency in Action">
+    </section>
+    
+    <section id="services" class="features">
+        <div class="feature">
+            <h3>Expert Cold Calling</h3>
+            <p>Our trained professionals ensure high conversion rates for your SaaS product.</p>
+        </div>
+        <div class="feature">
+            <h3>Custom Strategies</h3>
+            <p>We tailor our approach to suit your unique product and target market.</p>
+        </div>
+        <div class="feature">
+            <h3>Real-Time Reporting</h3>
+            <p>Stay informed with transparent and detailed performance metrics.</p>
+        </div>
+    </section>
+    
+    <section id="testimonials">
+        <h2 align="center">What Our Clients Say</h2>
+        <div class="testimonials-container">
+            <div class="testimonial">
+                <div class="testimonial-image">
+                    <img src="Clien1.jpg" alt="Client 1">
+                </div>
+                <div class="testimonial-content">
 
-    <section id="services" class="features">  
-        <div class="feature">  
-            <h3>Expert Cold Calling</h3>  
-            <p>Our trained professionals ensure high conversion rates for your SaaS product.</p>  
-        </div>  
-        <div class="feature">  
-            <h3>Custom Strategies</h3>  
-            <p>We tailor our approach to suit your unique product and target market.</p>  
-        </div>  
-        <div class="feature">  
-            <h3>Real-Time Reporting</h3>  
-            <p>Stay informed with transparent and detailed performance metrics.</p>  
-        </div>  
-    </section>  
+                    <p>"StreamWorks has been instrumental in helping us scale our SaaS product. Their expertise in cold calling has been invaluable."</p>
+                    <h4>John Doe</h4>
+                </div>
 
-    <section id="about" class="cta">  
-        <h2>Your Sales Partner</h2>  
-        <p>With years of experience in cold calling and SaaS sales, StreamWorks is your trusted partner for scaling your product to new heights.</p>  
-        <a href="#contact">Let’s Work Together</a>  
-    </section>  
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-image">
+                    <img src="Sameer shahzad1 (1).jpeg" alt="Client 2">
+                </div>
+                <div class="testimonial-content">
+                    <p>"We've seen a significant increase in sales since partnering with StreamWorks. Their team is professional, knowledgeable, and results-driven."</p>
+                    <h4>Jane Smith</h4>
+                </div>
 
-    <footer>  
-        <p>&copy; 2024 StreamWorks. All rights reserved. | Empowering SaaS Sales</p>  
-    </footer>  
-</body>  
+            </div>
+        </div>
+    </section>
+    <section class="blog">
+        <h2>Our Success Stories</h2>
+        <p>We've helped numerous clients, including Azienbiz, achieve outstanding results in the US and Canada.</p>
+        <div class="blog-posts">
+            <div class="blog-post">
+                <h3>Azienbiz Case Study</h3>
+                <p>We successfully generated 500+ leads and scheduled 200+ appointments for Azienbiz in the US market.</p>
+                <a href="bookacal.html"
+                <button class="cta" >Book a Call</button>
+            </a>
+            </div>
+            <div class="blog-post">
+                <h3>US and Canada Market Expansion</h3>
+                <p>Our team has extensive experience in calling and appointment setting in the US and Canada. We've helped numerous businesses expand their reach in these markets.</p>
+                <a href="bookacal.html"
+                <button class="cta" >Book a Call</button>
+            </a>
+            </div>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14461.855129449422!2d-74.03878549999999!3d40.7127753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f931%3A0xc80b8f06e177fe62!2sNew+York%2C+NY!5e0!3m2!1sen!2s!4v1546526831421" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <div class="call-to-action">
+            <h2>Ready to Expand Your Business?</h2>
+            <p>Book a call with us today to learn more about our calling and appointment setting services.</p>
+            <a href="bookacal.html"
+            <button class="cta" >Book a Call</button>
+        </a>
+        </div>
+    </section>
 
+   
+    
+    <footer>
+        <p>&copy; 2024 StreamWorks. All rights reserved.</p>
+        <p>Powered by <a href="(link unavailable)">Azienbiz</a></p>
+    </footer>
+    <script>
+       
+        const navToggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('.nav');
+
+navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('active');
+    nav.classList.toggle('active');
+});
+    </script>
+    
+
+
+</body>
 </html>
